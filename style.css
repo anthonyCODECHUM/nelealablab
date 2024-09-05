@@ -1,0 +1,146 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container-fluid {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: transparent;
+   
+}
+
+.card-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+   
+}
+
+#inputText {
+    width: 100%;
+    max-width: 600px;
+    padding: 5px;
+    font-size: 1rem;
+    background-color: transparent; /* Make background transparent */
+    border: none; /* Remove border */
+    border-bottom: 1px solid #ddd; /* Add a subtle bottom border for visual separation */
+    border-radius: 0; /* No border radius for a flat design */
+    text-align: center;
+    color: #f00808; /* White text for visibility */
+    outline: none; /* Remove outline on focus */
+}
+
+#inputText::placeholder {
+    color: #f30b0b; /* Light placeholder text */
+    opacity: 0.7; /* Lower opacity for subtlety */
+}
+
+#inputText:focus {
+    border-bottom: 1px solid #e10d0d; /* Change border color on focus */
+}
+
+
+.text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+.charbox {
+    display: inline-flex;
+    flex-direction: column; /* Stack the char and count vertically */
+    align-items: center; /* Center the char and count horizontally */
+    vertical-align: middle;
+}
+
+.char {
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    color: white;
+    padding: 10px;
+}
+
+.count {
+    display: inline-block;
+    font-size: 0.2em; /* Smaller font size for count */
+    margin-top: 1px; /* Add space between the char and count */
+    color: white;
+}
+
+
+.card-footer {
+    
+    padding: 10px;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .char {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    .count {
+        font-size: 0.5em;
+    }
+    #inputText {
+        max-width: 100%;
+    }
+}
+
+/* Custom class for 80vh height */
+.carousel-item img {
+    height: 80vh;
+    object-fit: cover;
+}
+
+/* Light Mode Styles */
+body.light-mode .card-header,
+body.light-mode .card-footer {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+body.light-mode .card {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #000000;
+    color: #ddd;
+}
+
+body.dark-mode .card-header,
+body.dark-mode .card-footer {
+    background-color: #000000;
+    color: #ddd;
+}
+
+body.dark-mode .card {
+    background-color: #000000;
+    color: #ddd;
+}
+
